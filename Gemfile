@@ -28,11 +28,14 @@ gem 'jbuilder', '2.10.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '1.4.6', require: false
 
+gem 'pg', '1.2.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'sqlite3', '1.4.2'
+  #gem 'sqlite3', '1.4.2'
   gem 'rspec-rails', '>= 2.0.0.beta'
+  gem 'guard-rspec', '4.6.0'
 end
 
 group :development do
@@ -41,6 +44,7 @@ group :development do
   gem 'listen', '3.2.1'
   gem 'spring', '2.1.1'
   gem 'spring-watcher-listen', '2.0.1'
+  #gem 'guard-rspec', '0.5.5'
 end
 
 group :test do
@@ -54,11 +58,14 @@ group :test do
   gem 'minitest-reporters', '1.3.8'
   gem 'guard', '2.16.2'
   gem 'guard-minitest', '2.4.6'
+  gem 'rb-fchange', '0.0.5'
+  gem 'rb-notifu', '0.0.4'
+  gem 'win32console', '1.3.0'
+  gem 'guard-spork', '2.1.0', require: false
+  #gem 'spork', '0.9.0'
+  gem 'spork', :github => 'sporkrb/spork'
 end
 
-group :production do
-  gem 'pg', '1.2.3'
-end  
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
